@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bytenotes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/principalStyle.css') }}" /> <!-- Enlace a la hoja de estilos CSS -->
+</head>
+<body  style="background-color: rgb(189, 189, 189);">
+    <div class="nav"> <!-- Contenedor para la barra de navegación -->
+        <a href="{{ url_for('home') }}">Inicio</a> <!-- Enlace a la página de inicio -->
+        <a href="{{url_for('planes')}}">Planes</a> <!-- Enlace a la página de planes -->
+        <a href="{{url_for('blogs')}}">Blogs</a> <!-- Enlace a la página de blogs -->
+        <img src="{{url_for('static', filename='images/profile.png')}}" style="width: 70px; height: 70px;" alt="ByteNotes"> <!-- Logo de la página -->
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <p>Te gustaría ofrecer información con la capacidad de manifestar la capacidad de innovación y aportar un grano al gran conocimiento, aquí te daremos las herramientas para poder lograrlo.</p>
+        <button class="create-btn" style="padding: 10px; margin-bottom: 20px;">CREAR BLOGS</button>
+        <img src="{{url_for('static', filename='images/imagenBlog.jpg')}}" style="width: 400px; height: auto;" alt="BlogIntro"> <!-- Logo de la página -->
+    </div>
+</body>
+</html>

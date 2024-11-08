@@ -9,7 +9,7 @@
 <body style="background-color: rgb(189, 189, 189);"> <!-- Estilo de fondo aplicado directamente al cuerpo -->
     <div class="login-container"> <!-- Contenedor principal para el formulario de inicio de sesión -->
         <h2>Iniciar Sesión</h2> <!-- Título principal de la sección de inicio de sesión -->
-        <form action="#" method="post"> <!-- Formulario que se enviará al servidor (acción puede ser modificada) -->
+        <form action="#"> <!-- Formulario que se enviará al servidor (acción puede ser modificada) -->
             <div class="input-group"> <!-- Grupo para el campo de entrada del usuario -->
                 <label for="username">Usuario</label> <!-- Etiqueta para el campo de nombre de usuario -->
                 <input type="text" id="username" name="username" required> <!-- Campo de entrada para el nombre de usuario, requerido -->
@@ -18,7 +18,7 @@
                 <label for="password">Contraseña</label> <!-- Etiqueta para el campo de contraseña -->
                 <input type="password" id="password" name="password" required> <!-- Campo de entrada para la contraseña, requerido -->
             </div>
-            <button type="submit">Iniciar Sesión</button><br> <!-- Botón para enviar el formulario -->
+            <button type="submit" >Iniciar Sesión</button><br> <!-- Botón para enviar el formulario -->
             <br><a href="{{ url_for('home') }}" class="login-button">volver</a> <!-- Enlace para volver a la página principal -->
         </form>
     </div>
