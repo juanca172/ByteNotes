@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Define el conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración para que la página sea responsiva -->
+    <title>ByteNotes</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/principalStyle.css') }}" /> <!-- Enlace a la hoja de estilos CSS -->
+</head>
+<body style="background-color: rgb(189, 189, 189);"> <!-- Color de fondo del cuerpo de la página -->
+
+<div class="nav"> <!-- Contenedor para la barra de navegación -->
+    <a href="{{ url_for('home') }}">Inicio</a> <!-- Enlace a la página de inicio -->
+    <a href="{{url_for('planes')}}">Planes</a> <!-- Enlace a la página de planes -->
+    <a href="#">Contacto</a> <!-- Enlace a la página de contacto (sin destino definido) -->
+    <a href="{{url_for('blogs')}}">Blogs</a> <!-- Enlace a la página de blogs -->
+    <a href="{{url_for('login')}}" class="login-button">Inicio de Sesión</a> <!-- Enlace a la página de inicio de sesión -->
+    <a href="{{url_for('registro')}}" class="register-button">Registro</a> <!-- Enlace a la página de registro -->
+    <img src="{{url_for('static', filename='images/logo.png')}}" style="width: 70px; height: 70px;" alt="ByteNotes"> <!-- Logo de la página -->
+</div>
+
+<div class="main-content"> <!-- Contenedor para el contenido principal de la página -->
+    <h1>CREA TU BLOG GRATIS</h1> <!-- Título principal -->
+    <p>¡ES MUY FÁCIL!</p> <!-- Mensaje motivacional -->
+    <a href="#" class="signup-button">CREAR</a> <!-- Botón para crear un blog (sin destino definido) -->
+    <img src="{{url_for('static', filename='images/imangen.png')}}" style="width: 608px; height: 300px;" alt="ByteNotes"> <!-- Imagen destacada -->
+</div>
+
+<footer class="footer" style="visibility: visible;"> <!-- Contenedor para el pie de página -->
+    <div class="container"> <!-- Contenedor adicional para la estructura del pie -->
+        <div class="footer-info"> <!-- Sección de información del pie -->
+            <div class="footer-logo"> <!-- Logo en el pie de página -->
+                <img src="{{url_for('static', filename='images/logo.png')}}" style="width: 70px; height: 70px;" alt="ByteNotes">
+            </div>
+            <div class="footer-contact"> <!-- Sección de contacto -->
+                <p>Dirección: Cra68c N54A 68-sur, Bogotá D.c, Colombia</p> <!-- Dirección física -->
+                <p>Correo: BytesNotes@gmail.com</p> <!-- Correo de contacto -->
+                <p class="copyright">© 2024 ByteNotes. Todos los derechos reservados.</p> <!-- Información de derechos de autor -->
+            </div>
+            <div class="footer-social"> <!-- Sección de redes sociales -->
+                <a href="#" class="social-icon"><img src="{{ url_for('static', filename='images/facebook.png') }}" alt="Facebook"></a> <!-- Enlace a Facebook -->
+                <a href="#" class="social-icon"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="Twitter"></a> <!-- Enlace a Twitter -->
+                <a href="#" class="social-icon"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram"></a> <!-- Enlace a Instagram -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

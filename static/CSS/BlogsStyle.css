@@ -1,0 +1,109 @@
+/* Estilo general del cuerpo de la página */
+body {
+  font-family: Arial, sans-serif; /* Fuente de texto */
+  margin: 0; /* Sin margen */
+  padding: 0; /* Sin padding */
+}
+
+/* Estilo para la barra de navegación */
+.nav {
+  background-color: #ffff99; /* Color de fondo amarillo claro */
+  padding: 10px 0; /* Espaciado vertical */
+  display: flex; /* Usar flexbox para alinear elementos */
+  justify-content: space-around; /* Distribuir elementos uniformemente */
+  align-items: center; /* Centrar elementos verticalmente */
+  list-style: none; /* Sin estilos de lista */
+  margin: 0; /* Sin margen */
+}
+
+/* Estilo para los enlaces de la navegación */
+.nav a {
+  color: black; /* Color del texto en negro */
+  text-decoration: none; /* Sin subrayado */
+  padding: 8px 16px; /* Espaciado interno para enlaces */
+  transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+/* Efecto hover para los enlaces de la navegación */
+.nav a:hover {
+  background-color: #e6e600; /* Cambia el fondo a amarillo oscuro al pasar el ratón */
+}
+
+/* Estilo para el botón de inicio de sesión */
+.login-button {
+  background-color: rgb(255, 255, 255); /* Fondo blanco */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 4px; /* Espaciado interno */
+}
+
+/* Estilo para el botón de registro */
+.register-button {
+  background-color: rgb(255, 255, 255); /* Fondo blanco */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 4px; /* Espaciado interno */
+}
+
+/* Estilo para la sección del blog */
+.blog-section {
+  display: flex; /* Usar flexbox para la disposición */
+  flex-wrap: wrap; /* Permitir que los elementos se ajusten a la siguiente línea */
+  justify-content: space-between; /* Distribuir elementos en el espacio disponible */
+  max-width: 800px; /* Ancho máximo de la sección */
+  margin: 0 auto; /* Centrar horizontalmente */
+  padding: 20px; /* Espaciado interno */
+}
+
+/* Estilo para cada entrada del blog */
+.blog {
+  border-radius: 15px; /* Bordes redondeados */
+  flex: 0 0 calc(33.33% - 20px); /* Toma el 33.33% del ancho, menos un margen */
+  margin-bottom: 20px; /* Espacio debajo de cada entrada */
+  background-color: #f4f4f4; /* Color de fondo gris claro */
+  padding: 20px; /* Espaciado interno */
+  border: 1px solid #ddd; /* Borde gris claro */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+/* Estilo para los encabezados de segundo nivel */
+h2 {
+  color: #007bff; /* Color azul */
+  font-size: 24px; /* Tamaño de fuente */
+  margin-top: 0; /* Sin margen superior */
+}
+
+/* Estilo para los párrafos */
+p {
+  border-radius: 15px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  line-height: 1.5; /* Altura de línea para mejorar la legibilidad */
+  margin-bottom: 10px; /* Espacio debajo de cada párrafo */
+}
+
+/* Estilo para los encabezados de quinto nivel */
+h5 {
+  display: inline-block; /* Mostrar como bloque en línea */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 2px solid #000000; /* Borde negro */
+  color: #000000; /* Color del texto en negro */
+  padding: 10px 20px; /* Espaciado interno */
+  text-decoration: none; /* Sin subrayado */
+  margin-top: 20px; /* Margen superior */
+  margin-bottom: 10px; /* Margen inferior */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Sombra para un efecto elevado */
+}
+
+/* Estilo para listas ordenadas */
+ol {
+  margin: 0; /* Sin margen */
+  padding-left: 20px; /* Espaciado a la izquierda */
+}
+
+/* Estilo para elementos de lista */
+li {
+  margin-bottom: 5px; /* Espacio debajo de cada elemento de lista */
+}
+
+/* Estilo para el último párrafo dentro de cada entrada de blog */
+.blog p:last-child {
+  margin-bottom: 0; /* Sin margen inferior para el último párrafo */
+}

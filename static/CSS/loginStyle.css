@@ -1,0 +1,76 @@
+/* Estilo general del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Fuente de texto */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+    display: flex; /* Usar flexbox para la disposición */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+    height: 100vh; /* Altura del cuerpo igual a la altura de la ventana */
+    background-color: #f4f4f4; /* Color de fondo gris claro */
+}
+
+/* Estilo para el contenedor de inicio de sesión */
+.login-container {
+    background-color: #fff; /* Color de fondo blanco */
+    padding: 70px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para un efecto elevado */
+}
+
+/* Estilo para los encabezados de segundo nivel */
+h2 {
+    margin-top: 0; /* Sin margen superior */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilo para el grupo de entrada */
+.input-group {
+    margin-bottom: 15px; /* Espacio debajo de cada grupo de entrada */
+}
+
+/* Estilo para las etiquetas dentro del grupo de entrada */
+.input-group label {
+    display: block; /* Mostrar como bloque */
+    margin-bottom: 5px; /* Espacio debajo de la etiqueta */
+}
+
+/* Estilo para los campos de entrada */
+.input-group input {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde gris claro */
+}
+
+/* Estilo para los botones */
+button {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #007bff; /* Color de fondo azul */
+    color: #fff; /* Color del texto en blanco */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave para el fondo */
+}
+
+/* Estilo para enlaces */
+a {
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f11b1b; /* Color de fondo rojo */
+    color: rgb(255, 255, 255); /* Color del texto en blanco */
+    padding: 10px 0; /* Espaciado interno */
+    display: flex; /* Usar flexbox para la disposición */
+    justify-content: space-around; /* Distribuir elementos dentro del enlace */
+    align-items: center; /* Centrar elementos verticalmente */
+    list-style: none; /* Sin estilos de lista */
+    margin: 0; /* Sin margen */
+}
+
+/* Efecto hover para los botones */
+button:hover {
+    background-color: #0056b3; /* Cambia el fondo a un azul más oscuro al pasar el ratón */
+}

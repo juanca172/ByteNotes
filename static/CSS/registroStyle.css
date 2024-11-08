@@ -1,0 +1,76 @@
+/* Estilo básico para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif; /* Fuente utilizada en el cuerpo */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+    display: flex; /* Usar flexbox para la disposición */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+    height: 100vh; /* Altura del cuerpo igual a la altura de la ventana */
+    background-color: #f4f4f4; /* Color de fondo gris claro */
+}
+
+/* Estilo para el contenedor del registro */
+.registro-container {
+    background-color: #fff; /* Fondo blanco */
+    padding: 60px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0); /* Sombra (no visible debido a la opacidad 0) */
+}
+
+/* Estilo para el encabezado de nivel 2 */
+h2 {
+    margin-top: 0; /* Sin margen superior */
+    text-align: center; /* Centrar texto */
+}
+
+/* Estilo para los grupos de entrada */
+.input-group {
+    margin-bottom: 15px; /* Espacio debajo de cada grupo de entrada */
+}
+
+/* Estilo para las etiquetas de los campos de entrada */
+.input-group label {
+    display: block; /* Mostrar como bloque */
+    margin-bottom: 5px; /* Espacio debajo de la etiqueta */
+}
+
+/* Estilo para los campos de entrada */
+.input-group input {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde gris claro */
+}
+
+/* Estilo para los botones */
+button {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #007bff; /* Color de fondo azul */
+    color: #fff; /* Color del texto en blanco */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambiar cursor a puntero */
+    transition: background-color 0.3s ease; /* Transición suave para el fondo */
+}
+
+/* Estilo para los enlaces */
+a {
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f11b1b; /* Color de fondo rojo */
+    color: rgb(255, 255, 255); /* Color del texto en blanco */
+    padding: 10px 0; /* Espaciado vertical */
+    display: flex; /* Usar flexbox para la disposición */
+    justify-content: space-around; /* Distribuir elementos uniformemente */
+    align-items: center; /* Centrar elementos verticalmente */
+    list-style: none; /* Sin estilos de lista */
+    margin: 0; /* Sin margen */
+}
+
+/* Estilo para el botón en estado de foco */
+button:focus {
+    background-color: #0056b3; /* Cambia el fondo a azul más oscuro cuando se enfoca */
+}

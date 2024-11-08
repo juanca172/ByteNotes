@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Define el conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsiva -->
+    <title>Planes de ByteNotes</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/planesStyle.css')}}"> <!-- Enlace a la hoja de estilos CSS -->
+</head>
+<body style="background-color: rgb(189, 189, 189);"> <!-- Color de fondo del cuerpo de la página -->
+
+    <div class="nav"> <!-- Contenedor para la barra de navegación -->
+        <a href="{{ url_for('home') }}">Inicio</a> <!-- Enlace a la página de inicio -->
+        <a href="{{url_for('planes')}}">Planes</a> <!-- Enlace a la página de planes -->
+        <a href="#">Contacto</a> <!-- Enlace a la página de contacto (sin destino definido) -->
+        <a href="{{url_for('blogs')}}">Blogs</a> <!-- Enlace a la página de blogs -->
+        <a href="{{url_for('login')}}" class="login-button">Inicio de Sesión</a> <!-- Enlace a la página de inicio de sesión -->
+        <a href="{{url_for('registro')}}" class="register-button">Registro</a> <!-- Enlace a la página de registro -->
+        <img src="{{url_for('static',filename='images/logo.png')}}" style="width: 70px; height: 70px;" alt="ByteNotes"> <!-- Logo de la página -->
+    </div><br> <!-- Espacio debajo de la barra de navegación -->
+
+    <div class="pricing-table"> <!-- Contenedor principal para la tabla de precios -->
+        <div class="pricing-table-column"> <!-- Columna para el plan Personal -->
+            <div class="pricing-table-header" style="background-color: rgb(247, 187, 60);"> <!-- Encabezado del plan Personal -->
+                <h2 class="pricing-table-title">Personal</h2> <!-- Título del plan -->
+                <p class="pricing-table-price">$ FREE<br>Los 3 primeros meses</p> <!-- Precio del plan -->
+            </div>
+            <ul class="pricing-table-features"> <!-- Lista de características del plan -->
+                <li>Podrá crear 3 Blogs MAX.</li>
+                <li>2Gb de almacenamiento</li>
+                <li>1 Usuario por proyecto</li>
+                <li>No tiene descargas ilimitadas</li>
+                <li>No tiene ayudas Premium</li>
+                <li>No tiene publicidad de sus blogs</li>
+                <li>Herramientas Básicas</li>
+            </ul>
+            <a href="#" class="btn">Elegir</a> <!-- Botón para elegir este plan (sin destino definido) -->
+        </div>
+        
+        <div class="pricing-table-column"> <!-- Columna para el plan Compartido -->
+            <div class="pricing-table-header" style="background-color: rgb(62, 226, 213);"> <!-- Encabezado del plan Compartido -->
+                <h2 class="pricing-table-title">Compartido</h2> <!-- Título del plan -->
+                <p class="pricing-table-price">$5<br>Al mes</p> <!-- Precio del plan -->
+            </div>
+            <ul class="pricing-table-features"> <!-- Lista de características del plan -->
+                <li>Podrá crear 15 Blogs MAX.</li>
+                <li>5Gb de almacenamiento</li>
+                <li>2 Usuario por proyecto</li>
+                <li>Hasta 5gb de descargas</li>
+                <li>No tiene ayudas Premium</li>
+                <li>Tiene publicidad de sus blogs</li>
+                <li>Herramientas Premium</li>
+            </ul>
+            <a href="#" class="btn">Elegir</a> <!-- Botón para elegir este plan (sin destino definido) -->
+        </div>
+
+        <div class="pricing-table-column"> <!-- Columna para el plan VIP -->
+            <div class="pricing-table-header" style="background-color: rgb(255, 106, 106);"> <!-- Encabezado del plan VIP -->
+                <h2 class="pricing-table-title">VIP</h2> <!-- Título del plan -->
+                <p class="pricing-table-price">$20<br> Al mes</p> <!-- Precio del plan -->
+            </div>
+            <ul class="pricing-table-features"> <!-- Lista de características del plan -->
+                <li>Podrá crear Blogs Ilimitados.</li>
+                <li>20Gb de almacenamiento</li>
+                <li>5 Usuario por proyecto</li>
+                <li>Monetizar sus blogs</li>
+                <li>Descargas Ilimitadas</li>
+                <li>Tiene ayudas Premium</li>
+                <li>Tiene publicidad de sus blogs</li>
+            </ul>
+            <a href="#" class="btn">Elegir</a> <!-- Botón para elegir este plan (sin destino definido) -->
+        </div>
+    </div> <!-- Fin de la tabla de precios -->
+</body>
+</html>

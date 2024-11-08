@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ByteNotes</title> <!-- Título de la página que se muestra en la pestaña del navegador -->
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/BlogsStyle.css') }}"> <!-- Enlace a la hoja de estilos CSS -->
+</head>
+<body style="background-color: rgb(189, 189, 189);"> <!-- Estilo de fondo aplicado directamente al cuerpo -->
+
+    <div class="nav"> <!-- Contenedor de la barra de navegación -->
+        <a href="{{ url_for('home') }}">Inicio</a> <!-- Enlace a la página de inicio -->
+        <a href="{{url_for('planes')}}">Planes</a> <!-- Enlace a la página de planes -->
+        <a href="#">Contacto</a> <!-- Enlace a la sección de contacto (sin destino definido) -->
+        <a href="{{url_for('blogs')}}">Blogs</a> <!-- Enlace a la página de blogs -->
+        <a href="{{url_for('login')}}" class="login-button">Inicio de Sesión</a> <!-- Enlace a la página de inicio de sesión -->
+        <a href="{{url_for('registro')}}" class="register-button">Registro</a> <!-- Enlace a la página de registro -->
+        <img src="{{url_for('static', filename='images/logo.png')}}" style="width: 70px; height: 70px;" alt="ByteNotes"> <!-- Logo de la página -->
+    </div><br>
+
+    <section class="blog-section"> <!-- Sección que contiene los blogs -->
+        <div class="blog"> <!-- Contenedor para un artículo de blog -->
+            <img src="{{url_for('static', filename='images/Animales.png')}}" style="width: 626px; height: 351px;" alt=""> <!-- Imagen del blog -->
+            <h2>¿Curiosidades de los animales salvajes?</h2> <!-- Título del blog -->
+            <p>Bienvenido a "Salvaje: Explorando la Vida Silvestre. Descubre la fascinante vida de los animales salvajes en todo el mundo a través de historias cautivadoras, datos intrigantes y fotografías impresionantes. Únete a nuestra comunidad apasionada de amantes de la naturaleza y sumérgete en la belleza y la importancia de la conservación de la vida silvestre.</p> <!-- Descripción del blog -->
+            <h5>POR BERTO LOPEZ HACE 2 DIAS</h5> <!-- Autor y fecha del blog -->
+        </div>
+
+        <div class="blog"> <!-- Contenedor para otro artículo de blog -->
+            <img src="{{url_for('static', filename='images/Moda.png')}}" style="width: 626px; height: 351px;"  alt=""> <!-- Imagen del blog -->
+            <h2>¿Tips sobre belleza que me han funcionado y lo harán para ti?</h2> <!-- Título del blog -->
+            <p>Bienvenido a "Radiante: Tips de Belleza. Descubre consejos prácticos, tutoriales y recomendaciones para realzar tu belleza natural. Únete a nuestra comunidad y brilla desde adentro hacia afuera con nosotros.</p> <!-- Descripción del blog -->
+            <h5>POR BETTY QUATER HACE 2 DIAS</h5> <!-- Autor y fecha del blog -->
+        </div>
+
+        <div class="blog"> <!-- Contenedor para otro artículo de blog -->
+            <img src="{{url_for('static', filename='images/PLUGINS2.jpg')}}" style="width: 626px; height: 351px;"  alt=""> <!-- Imagen del blog -->
+            <h2>¿Cómo configurar un plugin de WordPress?</h2> <!-- Título del blog -->
+            <ol> <!-- Lista ordenada para pasos -->
+                <li><strong>Instalación:</strong> Ve a "Plugins" > "Añadir nuevo" en el panel de WordPress. Busca el plugin deseado y haz clic en "Instalar ahora" y luego en "Activar".</li> <!-- Paso 1 -->
+                <li><strong>Configuración:</strong> Busca el nombre del plugin en el menú lateral de WordPress o en una nueva sección agregada por el plugin. Personaliza la configuración según tus necesidades.</li> <!-- Paso 2 -->
+            </ol>
+            <h5>POR BETTY QUATER HACE 2 DIAS</h5> <!-- Autor y fecha del blog -->
+        </div>
+    </section>
+</body>
+</html>

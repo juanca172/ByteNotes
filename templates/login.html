@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Especifica el idioma de la página como español -->
+<head>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración para un diseño responsive -->
+    <title>Iniciar Sesión</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/loginStyle.css')}}" /> <!-- Enlace a la hoja de estilos CSS para el diseño de la página -->
+</head>
+<body style="background-color: rgb(189, 189, 189);"> <!-- Estilo de fondo aplicado directamente al cuerpo -->
+    <div class="login-container"> <!-- Contenedor principal para el formulario de inicio de sesión -->
+        <h2>Iniciar Sesión</h2> <!-- Título principal de la sección de inicio de sesión -->
+        <form action="#" method="post"> <!-- Formulario que se enviará al servidor (acción puede ser modificada) -->
+            <div class="input-group"> <!-- Grupo para el campo de entrada del usuario -->
+                <label for="username">Usuario</label> <!-- Etiqueta para el campo de nombre de usuario -->
+                <input type="text" id="username" name="username" required> <!-- Campo de entrada para el nombre de usuario, requerido -->
+            </div>
+            <div class="input-group"> <!-- Grupo para el campo de entrada de la contraseña -->
+                <label for="password">Contraseña</label> <!-- Etiqueta para el campo de contraseña -->
+                <input type="password" id="password" name="password" required> <!-- Campo de entrada para la contraseña, requerido -->
+            </div>
+            <button type="submit">Iniciar Sesión</button><br> <!-- Botón para enviar el formulario -->
+            <br><a href="{{ url_for('home') }}" class="login-button">volver</a> <!-- Enlace para volver a la página principal -->
+        </form>
+    </div>
+</body>
+</html>

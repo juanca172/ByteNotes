@@ -1,0 +1,110 @@
+/* Estilo para encabezados de cuarto nivel */
+h4 {
+  text-align: center; /* Centrar el texto */
+  margin-bottom: 20px; /* Espacio debajo del encabezado */
+}
+
+/* Estilo para la barra de navegación */
+.nav {
+  background-color: #ffff99; /* Color de fondo amarillo claro */
+  padding: 10px 0; /* Espaciado vertical */
+  display: flex; /* Usar flexbox para la disposición */
+  justify-content: space-around; /* Distribuir elementos uniformemente */
+  align-items: center; /* Centrar elementos verticalmente */
+  list-style: none; /* Sin estilos de lista */
+  margin: 0; /* Sin margen */
+}
+
+/* Estilo para los enlaces de la navegación */
+.nav a {
+  color: black; /* Color del texto en negro */
+  text-decoration: none; /* Sin subrayado */
+  padding: 8px 16px; /* Espaciado interno para enlaces */
+  transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+/* Efecto hover para los enlaces de la navegación */
+.nav a:hover {
+  background-color: #e6e600; /* Cambia el fondo a amarillo oscuro al pasar el ratón */
+}
+
+/* Estilo para el botón de inicio de sesión */
+.login-button {
+  background-color: rgb(255, 255, 255); /* Fondo blanco */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 4px; /* Espaciado interno */
+}
+
+/* Estilo para el botón de registro */
+.register-button {
+  background-color: rgb(255, 255, 255); /* Fondo blanco */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 4px; /* Espaciado interno */
+}
+
+/* Estilo para la tabla de precios */
+.pricing-table {
+  display: flex; /* Usar flexbox para la disposición */
+  justify-content: space-around; /* Distribuir columnas uniformemente */
+  align-items: center; /* Centrar elementos verticalmente */
+  flex-wrap: wrap; /* Permitir que las columnas se ajusten a la siguiente línea */
+  margin: 0 -15px; /* Margen negativo para ajustar el espaciado */
+}
+
+/* Estilo para cada columna de la tabla de precios */
+.pricing-table-column {
+  border-radius: 20px; /* Bordes redondeados */
+  background-color: rgb(255, 255, 255); /* Color de fondo blanco */
+  flex: 1 0 250px; /* Flexibilidad con un ancho mínimo de 250px */
+  margin: 0 15px; /* Espacio lateral entre columnas */
+  text-align: center; /* Centrar el texto dentro de la columna */
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.8); /* Sombra para un efecto elevado */
+}
+
+/* Estilo para el encabezado de cada columna de la tabla de precios */
+.pricing-table-header {
+  border-radius: 20px; /* Bordes redondeados */
+  color: #fff; /* Color del texto en blanco */
+  padding: 20px; /* Espaciado interno */
+  margin-bottom: 10px; /* Espacio debajo del encabezado */
+}
+
+/* Estilo para el título de la tabla de precios */
+.pricing-table-title {
+  font-size: 24px; /* Tamaño de fuente */
+  margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+/* Estilo para el precio en la tabla de precios */
+.pricing-table-price {
+  font-size: 36px; /* Tamaño de fuente más grande */
+  font-weight: bold; /* Negrita */
+  margin-bottom: 10px; /* Espacio debajo del precio */
+}
+
+/* Estilo para las características de la tabla de precios */
+.pricing-table-features {
+  border-radius: 15px; /* Bordes redondeados */
+  background-color: #ffffff; /* Color de fondo blanco */
+  list-style: none; /* Sin estilos de lista */
+  padding: 0; /* Sin padding */
+  margin: 0; /* Sin margen */
+}
+
+/* Estilo para cada elemento de la lista de características */
+.pricing-table-features li {
+  padding: 5px 0; /* Espaciado vertical en los elementos de lista */
+}
+
+/* Estilo para los botones */
+.btn {
+  display: inline-block; /* Mostrar como bloque en línea */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 2px solid #000000; /* Borde negro */
+  color: #000000; /* Color del texto en negro */
+  padding: 10px 20px; /* Espaciado interno */
+  text-decoration: none; /* Sin subrayado */
+  margin-top: 20px; /* Margen superior */
+  margin-bottom: 10px; /* Margen inferior */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Sombra para un efecto elevado */
+}
