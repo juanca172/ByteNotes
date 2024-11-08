@@ -1,6 +1,6 @@
-from flask import Flask, render_template, url_for ,request, redirect
-
+from flask import Flask, render_template, url_for, request, redirect, session
 app = Flask(__name__)
+app.secret_key = 'your_secret_key'  # Cambia esto a una clave secreta real
 
 @app.route('/')
 def home():
@@ -8,43 +8,57 @@ def home():
 
 @app.route('/blogs')
 def blogs():
-    return render_template('blogs.html')
+    if session.get('alreadyLogued'):
+        return redirect(url_for("blogsLogued"))
+    else:
+        return render_template('blogs.html')
 
 @app.route('/login')
 def login():
-    user = request.args.get('username')     # Obtiene el valor de 'username'
-    password = request.args.get('password') # Obtiene el valor de 'password'
+    user = request.args.get('username')
+    password = request.args.get('password')
     
-    # Compara el usuario y la contraseña (asegúrate de que password sea string)
     if user == "juancho" and password == "123":
-        # Redirige a la página principal (puedes cambiar 'home' por otra ruta)
+        session['alreadyLogued'] = True
         return redirect(url_for('page'))
     else:
-        # Si los datos son incorrectos, muestra el formulario de login
         return render_template('login.html', error="Credenciales incorrectas")
 
 @app.route('/planes')
 def planes():
-    return render_template('planes.html')
+    if session.get('alreadyLogued'):
+        return redirect(url_for("planesLoged"))
+    else:
+        return render_template('planes.html')
 
 @app.route('/registro')
 def registro():
     user = request.args.get('username')
     password = request.args.get('password')
     email = request.args.get('email')
-    print(user)
     
-    if user != None and password != None and email != None:
-        # Redirige a la página principal (puedes cambiar 'home' por otra ruta)
+    if user is not None and password is not None and email is not None:
+        session['alreadyLogued'] = True
         return redirect(url_for('page'))
     else:
-        # Si los datos son incorrectos, muestra el formulario de login
         return render_template('registro.html', error="Credenciales incorrectas")
 
-    
 @app.route('/page')
 def page():
     return render_template('page.html')
+
+@app.route("/blogsLogued")
+def blogsLogued():
+    return render_template("blogsLoged.html")
+
+@app.route("/planesLoged")
+def planesLoged():
+    return render_template("planesLoged.html")
+
+@app.route("/logout")
+def logout():
+    session.pop('alreadyLogued', None)  # Elimina la sesión del usuario
+    return redirect(url_for('home'))
 
 if __name__ == '__main__':
     app.run(debug=True)
