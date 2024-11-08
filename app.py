@@ -44,7 +44,7 @@ def registro():
     
 @app.route('/page')
 def page():
-    return render_template('page.html')
+    return render_template('page.html ')
 
 if __name__ == '__main__':
     app.run(debug=True)
