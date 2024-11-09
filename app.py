@@ -1,4 +1,5 @@
-from flask import Flask, render_template, url_for, request, redirect, session
+import sqlite3
+from flask import Flask, render_template, url_for, request, redirect, session, flash
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Cambia esto a una clave secreta real
 
@@ -13,7 +14,7 @@ def blogs():
     else:
         return render_template('blogs.html')
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     user = request.args.get('username')
     password = request.args.get('password')
@@ -24,6 +25,7 @@ def login():
     else:
         return render_template('login.html', error="Credenciales incorrectas")
 
+
 @app.route('/planes')
 def planes():
     if session.get('alreadyLogued'):
@@ -31,7 +33,7 @@ def planes():
     else:
         return render_template('planes.html')
 
-@app.route('/registro')
+@app.route('/registro', methods=['GET', 'POST'])
 def registro():
     user = request.args.get('username')
     password = request.args.get('password')
