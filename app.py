@@ -3,6 +3,7 @@ from flask import Flask, render_template, url_for, request, redirect, session, f
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Cambia esto a una clave secreta real
 
+
 @app.route('/')
 def home():
     return render_template('principal.html')
@@ -24,7 +25,6 @@ def login():
         return redirect(url_for('page'))
     else:
         return render_template('login.html', error="Credenciales incorrectas")
-
 
 @app.route('/planes')
 def planes():
