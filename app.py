@@ -1,9 +1,8 @@
 import sqlite3
-from flask import Flask, render_template, url_for ,request, redirect, flash
-
-
+from flask import Flask, render_template, url_for, request, redirect, session, flash
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+app.secret_key = 'your_secret_key'  # Cambia esto a una clave secreta real
+
 
 @app.route('/')
 def home():
@@ -11,73 +10,57 @@ def home():
 
 @app.route('/blogs')
 def blogs():
-    return render_template('blogs.html')
+    if session.get('alreadyLogued'):
+        return redirect(url_for("blogsLogued"))
+    else:
+        return render_template('blogs.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-
-        conn = sqlite3.connect('app_data.db')
-        cursor = conn.cursor()
-        cursor.execute('SELECT * FROM users WHERE username = ? AND password = ?', (username, password))
-        user = cursor.fetchone()
-        conn.close()
-
-        if user:
-            flash('Inicio de sesión exitoso.')
-            return redirect(url_for('home'))
-        else:
-            flash('Credenciales incorrectas, intente nuevamente.')
+    user = request.args.get('username')
+    password = request.args.get('password')
     
-    return render_template('login.html')
+    if user == "juancho" and password == "123":
+        session['alreadyLogued'] = True
+        return redirect(url_for('page'))
+    else:
+        return render_template('login.html', error="Credenciales incorrectas")
 
 @app.route('/planes')
 def planes():
-    return render_template('planes.html')
+    if session.get('alreadyLogued'):
+        return redirect(url_for("planesLoged"))
+    else:
+        return render_template('planes.html')
 
 @app.route('/registro', methods=['GET', 'POST'])
 def registro():
-    if request.method == 'POST':
-        username = request.form['username']
-        email = request.form['email']
-        password = request.form['password']
-
-        conn = sqlite3.connect('app_data.db')
-        cursor = conn.cursor()
-        try:
-            cursor.execute('INSERT INTO users (username, email, password) VALUES (?, ?, ?)', (username, email, password))
-            conn.commit()
-            flash('Registro exitoso, ahora puede iniciar sesión.')
-            return redirect(url_for('login'))
-        except sqlite3.IntegrityError:
-            flash('El correo ya está registrado.')
-        finally:
-            conn.close()
-
-    return render_template('registro.html')
-
+    user = request.args.get('username')
+    password = request.args.get('password')
+    email = request.args.get('email')
     
-@app.route('/page',)
+    if user is not None and password is not None and email is not None:
+        session['alreadyLogued'] = True
+        return redirect(url_for('page'))
+    else:
+        return render_template('registro.html', error="Credenciales incorrectas")
+
+@app.route('/page')
 def page():
     return render_template('page.html')
 
-def init_sqlite_db():
-    conn = sqlite3.connect('app_data.db')
-    cursor = conn.cursor()
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS users (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            username TEXT NOT NULL,
-            email TEXT NOT NULL UNIQUE,
-            password TEXT NOT NULL
-        )
-    ''')
-    conn.commit()
-    conn.close()
+@app.route("/blogsLogued")
+def blogsLogued():
+    return render_template("blogsLoged.html")
 
-init_sqlite_db()
+@app.route("/planesLoged")
+def planesLoged():
+    return render_template("planesLoged.html")
+
+@app.route("/logout")
+def logout():
+    session.pop('alreadyLogued', None)  # Elimina la sesión del usuario
+    return redirect(url_for('home'))
 
 if __name__ == '__main__':
     app.run(debug=True)
