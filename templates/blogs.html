@@ -39,6 +39,21 @@
             </ol>
             <h5>POR BETTY QUATER HACE 2 DIAS</h5> <!-- Autor y fecha del blog -->
         </div>
+        {% for blog in blogs %}
+        <div class="blog">
+            <img src="{{ blog.image }}" alt="Imagen de Blog" style="width: 626px; height: 351px;">
+            <h2>{{ blog.title }}</h2>
+            <p>{{ blog.description }}</p>
+            <h5>POR {{ blog.author }} HACE 2 DIAS </h5>
+        </div>
+            {% endfor %}
+        <form action="{{ url_for('add_blogs') }}" method="post">
+            <input type="text" name="title" placeholder="Título del Blog" required>
+            <input type="text" name="image" placeholder="URL de la Imagen">
+            <textarea name="description" placeholder="Descripción" required></textarea>
+            <input type="text" name="author" placeholder="Autor" required>
+            <button type="submit">Publicar Blog</button>
+        </form>
     </section>
 </body>
 </html>
