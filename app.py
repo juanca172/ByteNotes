@@ -25,7 +25,6 @@ def login():
     else:
         return render_template('login.html', error="Credenciales incorrectas")
 
-
 @app.route('/planes')
 def planes():
     if session.get('alreadyLogued'):
@@ -63,6 +62,18 @@ def add_blogs():
 def teardown_db(exception):
     close_db(exception)
 
+@app.route("/blogsLogued")
+def blogsLogued():
+    return render_template("blogsLoged.html")
+
+@app.route("/planesLoged")
+def planesLoged():
+    return render_template("planesLoged.html")
+
+@app.route("/logout")
+def logout():
+    session.pop('alreadyLogued', None)  # Elimina la sesión del usuario
+    return redirect(url_for('home'))
 
 if __name__ == '__main__':
     init_db(app)  # Inicializar la base de datos
